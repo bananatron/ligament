@@ -1,5 +1,5 @@
 # ligament.css
-###Ligament is a small library for responsive margin, padding and text utility classes.
+####Ligament is a small library for responsive margin, padding and text utility classes.
 
 
 `.xs-p1.sm-p4`
