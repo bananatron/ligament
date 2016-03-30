@@ -1,0 +1,69 @@
+// ligament.css
+// https://github.com/bananatron/ligament
+//  - - - - -
+// Responsive positional helpers for rapid production & prototyping
+// User however you want
+
+$value-max: 20; // Default 20
+$base-spacing-unit: 0.5rem; // Your unit increments
+
+$ligament-breakpoints: (
+  'xs' : 0px,
+  'sm'  : 767px,
+  'md'  : 992px,
+  'lg'  : 1200px
+);
+
+$position-map: (
+  't' : 'top',
+  'r' : 'right',
+  'b' : 'bottom',
+  'l' : 'left'
+);
+
+@mixin expand-breakpoints($breakpoint-map) {
+  @each $prefix, $breakpoint-px in $breakpoint-map {
+    @media (min-width: $breakpoint-px) {
+      .#{$prefix}{
+        @content;
+      }
+    }
+  }
+}
+
+//Padding
+@include expand-breakpoints($ligament-breakpoints){
+  @for $i from 0 through $value-max {
+    &-p#{$i}{
+      padding: $i * $base-spacing-unit !important;
+    }
+    
+    @each $key, $position in $position-map {
+      &-p#{$key}#{$i}{
+        padding-#{$position}: $i * $base-spacing-unit !important;
+      }
+    }
+  }
+}
+
+// Margin
+@include expand-breakpoints($ligament-breakpoints){
+  @for $i from 0 through $value-max {
+    &-m#{$i}{
+      margin: $i * $base-spacing-unit !important;
+    }
+    
+    @each $key, $position in $position-map {
+      &-m#{$key}#{$i}{
+        margin-#{$position}: $i * $base-spacing-unit !important;
+      }
+    }
+  }
+}
+
+@include expand-breakpoints($ligament-breakpoints){
+  &-text-left { text-align: left !important; }
+  &-text-right { text-align: right !important; }
+  &-text-center {  text-align: center !important; }
+  &-text-justify { text-align: justify !important; }
+}
