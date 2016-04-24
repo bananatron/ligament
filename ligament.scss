@@ -32,12 +32,12 @@ $position-map: (
 }
 
 //Padding
-@include expand-breakpoints($ligament-breakpoints){
+@include expand-breakpoints($ligament-breakpoints) {
   @for $i from 0 through $value-max {
     &-p#{$i}{
       padding: $i * $base-spacing-unit !important;
     }
-    
+
     @each $key, $position in $position-map {
       &-p#{$key}#{$i}{
         padding-#{$position}: $i * $base-spacing-unit !important;
@@ -47,12 +47,12 @@ $position-map: (
 }
 
 // Margin
-@include expand-breakpoints($ligament-breakpoints){
+@include expand-breakpoints($ligament-breakpoints) {
   @for $i from 0 through $value-max {
     &-m#{$i}{
       margin: $i * $base-spacing-unit !important;
     }
-    
+
     @each $key, $position in $position-map {
       &-m#{$key}#{$i}{
         margin-#{$position}: $i * $base-spacing-unit !important;
@@ -61,7 +61,7 @@ $position-map: (
   }
 }
 
-@include expand-breakpoints($ligament-breakpoints){
+@include expand-breakpoints($ligament-breakpoints) {
   &-text-left { text-align: left !important; }
   &-text-right { text-align: right !important; }
   &-text-center {  text-align: center !important; }
