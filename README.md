@@ -16,9 +16,16 @@ Text align left on 'xs' and above, text align right on 'md' and above.
 
 
 
+### Default breakpoints
+```
+'xs' : 0px,
+'sm'  : 767px,
+'md'  : 992px,
+'lg'  : 1200px
+```
 
 
-Examples: [http://codepen.io/spenser/pen/NNvgmW/](http://codepen.io/spenser/pen/NNvgmW/)
+Ligament playground: [http://codepen.io/spenser/pen/NNvgmW/](http://codepen.io/spenser/pen/NNvgmW/)
 
 
 *Be happy*
