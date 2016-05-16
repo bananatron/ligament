@@ -1,13 +1,18 @@
 # ligament.css
 ####Ligament is a small library for responsive margin, padding and text utility classes.
 
+`$value-max: 20;` Set maximum value  *(Default of 20)*
+
+`$base-spacing-unit: 0.5rem;` Set your unit increment size *(Default 0.5rem)*
+
+
 
 `.xs-p1.sm-p4`
-Padding 1 unit on 'xs' and padding 4 units on 'sm' and bigger.
+Add 1 unit of padding on `xs` and 4 units of padding on `sm` and bigger.
 
 
 `.xs-ml4.md-ml0.md-pt3`
-Margin left 4 units on 'xs' and above, margin left 0 (reset) on 'md' and above, padding top of 3 units on 'md' and above.
+Margin left 4 units on `xs` and above, margin left 0 (reset) on `md` and above, padding top of 3 units on `md` and above.
 
 
 `.xs-ml4.md-ml0.md-pt3`
