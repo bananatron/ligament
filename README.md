@@ -1,5 +1,5 @@
 # ligament.css
-####Ligament is a small library for responsive margin, padding and text utility classes.
+#### Ligament is a small library for responsive margin, padding and text utility classes.
 
 `$value-max: 20;` Set maximum unit value  *(Default of 20)*
 
