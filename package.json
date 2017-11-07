@@ -1,0 +1,27 @@
+{
+  "name": "ligament",
+  "version": "1.0.0",
+  "description": "A small css library for responsive margin, padding, and text utility classes. Edit",
+  "main": "ligament.scss",
+  "scripts": {
+    "build": "node-sass ligament.scss > ligament.css && node-sass --output-style compressed ligament.scss > ligament.min.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bananatron/ligament.git"
+  },
+  "keywords": [
+    "css",
+    "sass"
+  ],
+  "author": "Spenser Coke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bananatron/ligament/issues"
+  },
+  "homepage": "https://github.com/bananatron/ligament#readme",
+  "devDependencies": {
+    "node-sass": "^4.6.0"
+  }
+}
