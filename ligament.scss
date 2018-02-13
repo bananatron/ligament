@@ -60,9 +60,19 @@ $position-map: (
   }
 }
 
+// Text Align
 @include expand-breakpoints($ligament-breakpoints) {
   &-text-left { text-align: left !important; }
   &-text-right { text-align: right !important; }
   &-text-center {  text-align: center !important; }
   &-text-justify { text-align: justify !important; }
+}
+
+// Display
+@include expand-breakpoints($ligament-breakpoints) {
+  &-hide { display: none !important; }
+  &-block { display: block !important; }
+  &-inline { display: inline !important; }
+  &-inline-block { display: inline-block !important; }
+  &-flex { display: flex !important; }
 }
