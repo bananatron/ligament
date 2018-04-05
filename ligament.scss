@@ -7,23 +7,23 @@ $ligament-value-max: 20 !default; // Default 20
 $ligament-base-spacing-unit: 0.5rem !default; // Your unit increments
 
 $ligament-breakpoints: (
-  'xs' : 0px,
-  'sm'  : 767px,
-  'md'  : 992px,
-  'lg'  : 1200px
+  "xs": 0px,
+  "sm": 767px,
+  "md": 992px,
+  "lg": 1200px
 ) !default;
 
 $position-map: (
-  't' : 'top',
-  'r' : 'right',
-  'b' : 'bottom',
-  'l' : 'left'
+  "t": "top",
+  "r": "right",
+  "b": "bottom",
+  "l": "left"
 );
 
 @mixin expand-breakpoints($breakpoint-map) {
   @each $prefix, $breakpoint-px in $breakpoint-map {
     @media (min-width: $breakpoint-px) {
-      .#{$prefix}{
+      .#{$prefix} {
         @content;
       }
     }
@@ -33,12 +33,16 @@ $position-map: (
 //Padding
 @include expand-breakpoints($ligament-breakpoints) {
   @for $i from 0 through $ligament-value-max {
-    &-p#{$i}{
+    &-p#{$i} {
       padding: $i * $ligament-base-spacing-unit !important;
     }
+  }
+}
 
+@include expand-breakpoints($ligament-breakpoints) {
+  @for $i from 0 through $ligament-value-max {
     @each $key, $position in $position-map {
-      &-p#{$key}#{$i}{
+      &-p#{$key}#{$i} {
         padding-#{$position}: $i * $ligament-base-spacing-unit !important;
       }
     }
@@ -48,12 +52,16 @@ $position-map: (
 // Margin
 @include expand-breakpoints($ligament-breakpoints) {
   @for $i from 0 through $ligament-value-max {
-    &-m#{$i}{
+    &-m#{$i} {
       margin: $i * $ligament-base-spacing-unit !important;
     }
+  }
+}
 
+@include expand-breakpoints($ligament-breakpoints) {
+  @for $i from 0 through $ligament-value-max {
     @each $key, $position in $position-map {
-      &-m#{$key}#{$i}{
+      &-m#{$key}#{$i} {
         margin-#{$position}: $i * $ligament-base-spacing-unit !important;
       }
     }
@@ -62,17 +70,35 @@ $position-map: (
 
 // Text Align
 @include expand-breakpoints($ligament-breakpoints) {
-  &-text-left { text-align: left !important; }
-  &-text-right { text-align: right !important; }
-  &-text-center {  text-align: center !important; }
-  &-text-justify { text-align: justify !important; }
+  &-text-left {
+    text-align: left !important;
+  }
+  &-text-right {
+    text-align: right !important;
+  }
+  &-text-center {
+    text-align: center !important;
+  }
+  &-text-justify {
+    text-align: justify !important;
+  }
 }
 
 // Display
 @include expand-breakpoints($ligament-breakpoints) {
-  &-hide { display: none !important; }
-  &-block { display: block !important; }
-  &-inline { display: inline !important; }
-  &-inline-block { display: inline-block !important; }
-  &-flex { display: flex !important; }
+  &-hide {
+    display: none !important;
+  }
+  &-block {
+    display: block !important;
+  }
+  &-inline {
+    display: inline !important;
+  }
+  &-inline-block {
+    display: inline-block !important;
+  }
+  &-flex {
+    display: flex !important;
+  }
 }
